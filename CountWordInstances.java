@@ -1,3 +1,4 @@
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,7 +15,7 @@ public class CountWordInstances {
 		
 		HashMap<String, Integer> frequency = new HashMap<>();
 	
-		String alex = reader.readLine();
+		String alex = BoundedLineReader.readLine(reader, 5_000_000);
 		while(alex != null) {
 			
 			
@@ -37,7 +38,7 @@ public class CountWordInstances {
 				}
 			}
 			
-			alex = reader.readLine();
+			alex = BoundedLineReader.readLine(reader, 5_000_000);
 		}
 		
 		
