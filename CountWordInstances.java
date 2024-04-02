@@ -18,11 +18,11 @@ public class CountWordInstances {
 		while(alex != null) {
 			
 			
-			if(!alex.trim().equals("")) {
+			if(!"".equals(alex.trim())) {
 				String [] words = alex.split(" ");
 				
 				for(String word : words) {
-					if(word == null || word.trim().equals("")) {
+					if(word == null || "".equals(word.trim())) {
 						continue;
 					}
 					String processed = word.toLowerCase();
